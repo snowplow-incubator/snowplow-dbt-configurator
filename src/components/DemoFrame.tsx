@@ -1,11 +1,8 @@
-import { useState, useRef, useCallback, cloneElement, ReactElement, ReactNode } from 'react';
-import { CssBaseline } from '@mui/material';
-import { CacheProvider } from '@emotion/react';
+import { useState, useRef, useCallback, ReactElement, ReactNode } from 'react';
 import createCache, { EmotionCache } from '@emotion/cache';
 import { create, Jss } from 'jss';
-import { jssPreset, StylesProvider } from '@material-ui/core/styles';
-import Frame, { FrameComponentProps, FrameContextConsumer } from 'react-frame-component';
-import { __createChakraFrameProvider } from '@rjsf/chakra-ui';
+import { jssPreset } from '@material-ui/core/styles';
+import Frame, { FrameComponentProps } from 'react-frame-component';
 
 /*
 Adapted from https://github.com/mui-org/material-ui/blob/master/docs/src/modules/components/DemoSandboxed.js
