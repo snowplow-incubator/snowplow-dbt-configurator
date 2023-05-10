@@ -10,7 +10,7 @@ import {
   ValidatorType,
 } from '@rjsf/utils';
 
-import { samples } from '../samples';
+import { schemata } from '../schemata';
 import Header from './Header';
 import DemoFrame from './DemoFrame';
 import ErrorBoundary from './ErrorBoundary';
@@ -23,9 +23,8 @@ export interface PlaygroundProps {
 
 export default function Playground({ validators }: PlaygroundProps) {
   const [loaded, setLoaded] = useState(false);
-  const [schema, setSchema] = useState<RJSFSchema>(samples.Conversions.schema as RJSFSchema);
-  // const [uiSchema, setUiSchema] = useState<UiSchema>(samples.Simple.uiSchema);
-  const [formData, setFormData] = useState<any>(samples.Conversions.formData);
+  const [schema, setSchema] = useState<RJSFSchema>(schemata.Conversions.schema as RJSFSchema);
+  const [formData, setFormData] = useState<any>(schemata.Conversions.formData);
   const [extraErrors, setExtraErrors] = useState<ErrorSchema | undefined>();
   const [stylesheet, setStylesheet] = useState<string | null>(null);
   const [validator, setValidator] = useState<string>('AJV8');

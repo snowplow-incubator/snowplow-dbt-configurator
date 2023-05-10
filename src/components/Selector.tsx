@@ -1,27 +1,27 @@
 import { useState, MouseEvent } from 'react';
-import { Sample, samples } from '../samples';
+import { Schema, schemata } from '../schemata';
 
 interface SelectorProps {
   onSelected: (data: any) => void;
 }
 
 export default function Selector({ onSelected }: SelectorProps) {
-  const [current, setCurrent] = useState<Sample>('Conversions');
+  const [current, setCurrent] = useState<Schema>('Conversions');
 
-  function onLabelClick(label: Sample) {
+  function onLabelClick(label: Schema) {
     return (event: MouseEvent) => {
       event.preventDefault();
       setCurrent(label);
-      setTimeout(() => onSelected(samples[label]), 0);
+      setTimeout(() => onSelected(schemata[label]), 0);
     };
   }
 
   return (
     <ul className='nav nav-pills'>
-      {Object.keys(samples).map((label, i) => {
+      {Object.keys(schemata).map((label, i) => {
         return (
           <li key={i} role='presentation' className={current === label ? 'active' : ''}>
-            <a href='#' onClick={onLabelClick(label as Sample)}>
+            <a href='#' onClick={onLabelClick(label as Schema)}>
               {label}
             </a>
           </li>
