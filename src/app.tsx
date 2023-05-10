@@ -2,6 +2,7 @@ import v8Validator from '@rjsf/validator-ajv8';
 
 import Layout from './layout';
 import Playground, { PlaygroundProps } from './components';
+import SnowplowNav from './components/Navbar';
 
 const validators: PlaygroundProps['validators'] = {
   AJV8: v8Validator,
@@ -9,8 +10,12 @@ const validators: PlaygroundProps['validators'] = {
 
 export default function App() {
   return (
-    <Layout>
-      <Playground validators={validators} />
-    </Layout>
+    <>
+      <SnowplowNav />
+      <Layout>
+        <Playground validators={validators} />
+      </Layout>
+    </>
+
   );
 }
