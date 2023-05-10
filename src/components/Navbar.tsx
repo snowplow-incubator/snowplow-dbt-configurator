@@ -62,6 +62,11 @@ function SnowplowNav() {
                         Try Snowplow
                     </button>
                 </a>
+                <a target="_blank" href="https://snowplow.io/data-product-accelerators/">
+                    <button className="try-sp">
+                        Accelerators
+                    </button>
+                </a>
 
                 <span id="top-sidebar-toggle-span">
                     <a href="#" id="top-sidebar-toggle" data-sidebar-toggle="">
