@@ -247,9 +247,38 @@ a:hover {
     display: none;
 }
 
+.panel-body {
+    padding: 0;
+}
+
+.field-undefined,
+.panel {
+    background-color: #f6f6f6;
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+/* 
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+} */
+
+/* .form-group .field {
+    border-bottom: #000 solid 1px;
+}
+ */
+/* 
 @media only all and (max-width: 958px) {
     #sidebar {
-        /* width: 0px; */
         left: -354px;
     }
 
@@ -369,7 +398,7 @@ a:hover {
         font-size: 18px;
 
     }
-}
+} */
 
 #top-breadcrumbs {
     border-radius: 2px;
