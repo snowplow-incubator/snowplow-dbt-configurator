@@ -123,7 +123,12 @@ export default function Playground({ validators }: PlaygroundProps) {
         <ErrorBoundary>
           {showForm && (
             <DemoFrame
-              head={<link rel='stylesheet' id='theme' href={stylesheet || ''} />}
+              head={
+                <>
+                  <link rel='stylesheet' id='theme' href={stylesheet || ''} />
+                  <link rel='stylesheet' href="./src/static/custom.css" />
+                </>
+              }
               style={{
                 width: '100%',
                 height: 1000,
@@ -134,7 +139,6 @@ export default function Playground({ validators }: PlaygroundProps) {
                 templates={templates}
                 extraErrors={extraErrors}
                 schema={schema}
-                // uiSchema={uiSchema}
                 formData={formData}
                 validator={validators[validator]}
                 onChange={onFormDataChange}
