@@ -6,9 +6,9 @@ export default function Header({
 
 
   return (
-    <div className='page-header'>
+    <div className='page-header body'>
       <div className='row'>
-        <div className='col-sm-5'>
+        <div className='col-sm-7'>
           <Selector onSelected={load} />
         </div>
       </div>

@@ -120,7 +120,7 @@ export default function Playground({ validators }: PlaygroundProps) {
       <Header
         load={load}
       />
-      <div className='col-sm-5'>
+      <div className='col-sm-7'>
         <ErrorBoundary>
           {showForm && (
             <DemoFrame

@@ -57,7 +57,7 @@ function Editor({ title, code, onChange }: EditorProps) {
   );
 }
 
-const toJson = (val: unknown) => JSON.stringify(val, null, 2);
+const toJson = (val: unknown) => JSON.stringify(val, null, 1);
 
 type EditorsProps = {
   formData: any;
@@ -83,7 +83,7 @@ export default function Editors({
 
 
   return (
-    <div className='col-sm-7'>
+    <div className='col-sm-5'>
       <div className='row'>
         <Editor title='Project Variable' code={toJson(formData)} onChange={onFormDataEdited} />
       </div>
