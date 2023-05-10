@@ -1,7 +1,7 @@
 export default {
     schema: {
         type: "object",
-        required: [],
+        required: ["name"],
         properties: {
             snowplow__conversion_events: {
                 type: "array",
@@ -11,7 +11,7 @@ export default {
                     properties: {
                         name: {
                             type: "string",
-                            title: "Name of the conversion",
+                            title: "Name*",
                             default: "checkout"
                         },
                         condition: {
